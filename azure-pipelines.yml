@@ -13,6 +13,15 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+jobs:
+  - job: A
+    steps:
+      - bash: echo "A"
+
+  - job: B
+    steps:
+      - bash: echo "B"
+
 #steps:
 #  - task: NodeTool@0
 #    inputs:
@@ -28,13 +37,3 @@ pool:
 #      npm install
 #      npm run test
 #    displayName: 'npm install and test'
-
-
-jobs:
-  - job: A
-    steps:
-      - bash: echo "A"
-
-  - job: B
-    steps:
-      - bash: echo "B"
